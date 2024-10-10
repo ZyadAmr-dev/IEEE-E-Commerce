@@ -17,9 +17,9 @@ app.all("*", (req, res, next) => {
     return next(new Error("Page not found", { cause: 404 }))
 })
 
-// global error hanlder
+// global error handler
 app.use((err, req, res, next) => {
-    const statusCode = error.cause || 500
+    const statusCode = err.cause || 500
     return res.status(statusCode).json({
         success: false,
         message: err.message,
