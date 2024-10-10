@@ -19,7 +19,7 @@ app.all("*", (req, res, next) => {
 
 // global error hanlder
 app.use((err, req, res, next) => {
-    const statusCode = error.cause || 500
+    const statusCode = err.cause || 500
     return res.status(statusCode).json({
         success: false,
         message: err.message,
