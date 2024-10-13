@@ -21,6 +21,6 @@ export const register = asyncHandler(async (req, res, next) => {
     password: hashPassword,
   });
 
-  // missed : send email / confirm link
+  // to do : send email / confirm link
   return res.status(201).json({ success: true, message: "check email!" });
 });
