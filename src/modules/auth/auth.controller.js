@@ -1,7 +1,6 @@
 import { User } from "../../../DB/models/user.model.js";
-import { asyncHandler } from "../../middlewares/asyncHandler.js";
+import { asyncHandler } from "../../utils/asyncHandler.js";
 import bcryptjs from "bcryptjs";
-import jwt from "jsonwebtoken";
 
 export const register = asyncHandler(async (req, res, next) => {
   const { userName, email, password } = req.body;
@@ -14,14 +13,6 @@ export const register = asyncHandler(async (req, res, next) => {
   }
   // hash password
   const hashPassword = bcryptjs.hashSync(password, parseInt(process.env.SALT));
-
-  // generate token
-  const token = jwt.sign(
-    {
-      email,
-    },
-    process.env.TOKEN_SECRET
-  );
 
   // create user
   await User.create({
