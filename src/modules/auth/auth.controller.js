@@ -53,7 +53,7 @@ export const login = asyncHandler(async (req,res,next)=>{
   //check isConfirmed
   //if(!user.isConfirmed) return next(new Error("you should activate your account"))
   //check password
-  const match = bcryptjs.compareSync(password , user.password , process.env.TOKEN_SECRET)
+  const match = bcryptjs.compareSync(password , user.password )
   if(!match) return next(new Error("invalid password"))
   //generate token 
   const token = jwt.sign({email , id:user._id} , process.env.TOKEN_SECRET)
