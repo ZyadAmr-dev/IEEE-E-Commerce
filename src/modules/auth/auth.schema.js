@@ -6,3 +6,8 @@ export const register = Joi.object({
   password: Joi.string().required(),
   confirmPassword: Joi.string().valid(Joi.ref("password")).required,
 }).required();
+
+export const login = Joi.object({
+  email : Joi.string().email().required(),
+  password : Joi.string().required(),
+}).required()
