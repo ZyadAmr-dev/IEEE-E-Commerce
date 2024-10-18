@@ -8,6 +8,6 @@ export const register = Joi.object({
 }).required();
 
 export const login = Joi.object({
-  email : Joi.string().email().required(),
-  password : Joi.string().required(),
-}).required()
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+}).required();

@@ -3,6 +3,7 @@ import { asyncHandler } from "../../middlewares/asyncHandler.js";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { Token } from "../../../DB/models/token.model.js";
+import { Cart } from "../../../DB/models/cart.model.js";
 
 export const register = asyncHandler(async (req, res, next) => {
   const { userName, email, password } = req.body;
@@ -16,14 +17,6 @@ export const register = asyncHandler(async (req, res, next) => {
   // hash password
   const hashPassword = bcryptjs.hashSync(password, parseInt(process.env.SALT));
 
-  // generate token
-  const token = jwt.sign(
-    {
-      email,
-    },
-    process.env.TOKEN_SECRET
-  );
-
   // create user
   await User.create({
     userName,
@@ -31,7 +24,10 @@ export const register = asyncHandler(async (req, res, next) => {
     password: hashPassword,
   });
 
-  // missed : send email / confirm link
+  // create a cart
+  await Cart.create({ user: user._id });
+
+  // to do : send email / confirm link
   return res.status(201).json({ success: true, message: "check email!" });
 });
 
