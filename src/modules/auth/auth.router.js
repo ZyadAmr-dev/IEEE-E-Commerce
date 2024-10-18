@@ -10,12 +10,8 @@ router.post(
   validation(authSchema.register),
   authController.register
 );
-<<<<<<< Updated upstream
-=======
 
 //login
-router.post("/login" , validation(authSchema.login) , authController.login)
-
+router.post("/login", validation(authSchema.login), authController.login);
 
 export default router;
->>>>>>> Stashed changes
