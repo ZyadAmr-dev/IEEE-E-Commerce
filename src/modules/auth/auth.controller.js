@@ -1,6 +1,7 @@
 import { User } from "../../../DB/models/user.model.js";
 import { asyncHandler } from "../../utils/asyncHandler.js";
 import bcryptjs from "bcryptjs";
+import { Cart } from "../../../DB/models/cart.model.js";
 
 export const register = asyncHandler(async (req, res, next) => {
   const { userName, email, password } = req.body;
@@ -20,6 +21,9 @@ export const register = asyncHandler(async (req, res, next) => {
     email,
     password: hashPassword,
   });
+
+  // create a cart
+  await Cart.create({ user: user._id });
 
   // to do : send email / confirm link
   return res.status(201).json({ success: true, message: "check email!" });

@@ -16,5 +16,6 @@ router.post(
 );
 
 // As a user i want to view all reviews on certain product
+router.get("/:productID", asyncHandler(reviewController.getReviews));
 
 export default router;

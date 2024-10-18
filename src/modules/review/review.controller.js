@@ -50,3 +50,11 @@ export const addReview = async (req, res, next) => {
 
   return res.status(201).json({ success: true, data: review });
 };
+
+export const getReviews = async (req, res, next) => {
+  const { productID } = req.params;
+
+  const reviews = await Review.find({ productID }).populate("createdBy");
+
+  return res.status(200).json({ success: true, data: reviews });
+};

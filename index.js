@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./DB/connection.js";
 import authRouter from "./src/modules/auth/auth.router.js";
 import reviewRouter from "./src/modules/review/review.router.js";
+import cartRouter from "./src/modules/cart/cart.router.js";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 // routes
 app.use("/auth", authRouter);
 app.use("/review", reviewRouter);
+app.use("/cart", cartRouter);
 // page not found
 app.all("*", (req, res, next) => {
   return next(new Error("Page not found", { cause: 404 }));
