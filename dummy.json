@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Super Cool T-Shirt",
+    "description": "A stylish T-shirt that goes with everything.",
+    "images": [
+      {
+        "id": "img001",
+        "url": "https://example.com/images/tshirt-front.jpg"
+      },
+      {
+        "id": "img002",
+        "url": "https://example.com/images/tshirt-back.jpg"
+      }
+    ],
+    "defaultImage": {
+      "id": "img001",
+      "url": "https://example.com/images/tshirt-front.jpg"
+    },
+    "availableItems": 150,
+    "soldItems": 20,
+    "price": 29.99,
+    "discount": 10,
+    "createdBy": "5f5c3302b5b7b04c7a7c5a45",
+    "category": "Clothing",
+    "subcategory": "T-Shirts",
+    "brand": "CoolBrand",
+    "cloudFolder": "coolbrand-tshirts"
+  },
+  {
+    "name": "Trendy Sneakers",
+    "description": "Comfortable and stylish sneakers for everyday wear.",
+    "images": [
+      {
+        "id": "img101",
+        "url": "https://example.com/images/sneakers-side.jpg"
+      },
+      {
+        "id": "img102",
+        "url": "https://example.com/images/sneakers-top.jpg"
+      }
+    ],
+    "defaultImage": {
+      "id": "img101",
+      "url": "https://example.com/images/sneakers-side.jpg"
+    },
+    "availableItems": 200,
+    "soldItems": 50,
+    "price": 79.99,
+    "discount": 15,
+    "createdBy": "5f5c3302b5b7b04c7a7c5a46",
+    "category": "Footwear",
+    "subcategory": "Sneakers",
+    "brand": "TrendyFeet",
+    "cloudFolder": "trendyfeet-sneakers"
+  },
+  {
+    "name": "Elegant Wristwatch",
+    "description": "A luxury wristwatch with a sleek design.",
+    "images": [
+      {
+        "id": "img201",
+        "url": "https://example.com/images/wristwatch-front.jpg"
+      },
+      {
+        "id": "img202",
+        "url": "https://example.com/images/wristwatch-side.jpg"
+      }
+    ],
+    "defaultImage": {
+      "id": "img201",
+      "url": "https://example.com/images/wristwatch-front.jpg"
+    },
+    "availableItems": 100,
+    "soldItems": 10,
+    "price": 199.99,
+    "discount": 5,
+    "createdBy": "5f5c3302b5b7b04c7a7c5a47",
+    "category": "Accessories",
+    "subcategory": "Wristwatches",
+    "brand": "TimeMaster",
+    "cloudFolder": "timemaster-wristwatches"
+  },
+  {
+    "name": "Premium Leather Wallet",
+    "description": "A durable and stylish leather wallet.",
+    "images": [
+      {
+        "id": "img301",
+        "url": "https://example.com/images/wallet-front.jpg"
+      },
+      {
+        "id": "img302",
+        "url": "https://example.com/images/wallet-open.jpg"
+      }
+    ],
+    "defaultImage": {
+      "id": "img301",
+      "url": "https://example.com/images/wallet-front.jpg"
+    },
+    "availableItems": 300,
+    "soldItems": 100,
+    "price": 49.99,
+    "discount": 20,
+    "createdBy": "5f5c3302b5b7b04c7a7c5a48",
+    "category": "Accessories",
+    "subcategory": "Wallets",
+    "brand": "LeatherLux",
+    "cloudFolder": "leatherlux-wallets"
+  },
+  {
+    "name": "Noise-Cancelling Headphones",
+    "description": "Experience high-quality sound with these noise-cancelling headphones.",
+    "images": [
+      {
+        "id": "img401",
+        "url": "https://example.com/images/headphones-side.jpg"
+      },
+      {
+        "id": "img402",
+        "url": "https://example.com/images/headphones-front.jpg"
+      }
+    ],
+    "defaultImage": {
+      "id": "img401",
+      "url": "https://example.com/images/headphones-side.jpg"
+    },
+    "availableItems": 250,
+    "soldItems": 75,
+    "price": 149.99,
+    "discount": 12,
+    "createdBy": "5f5c3302b5b7b04c7a7c5a49",
+    "category": "Electronics",
+    "subcategory": "Headphones",
+    "brand": "SoundPro",
+    "cloudFolder": "soundpro-headphones"
+  }
+]  
