@@ -2,11 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./DB/connection.js";
 import searchRouter from "./src/modules/search product/search.routers.js";
-import authRouter from "./src/modules/auth/auth.router.js";
-import productRouter from "./src/modules/product/product.routers.js"; 
-import adminRouter from "./src/modules/admin/admin.router.js";
-import cartRouter from "./src/modules/cart/cart.router.js";
-
 dotenv.config();
 
 const app = express();
@@ -15,12 +10,8 @@ const port = process.env.PORT || 5000;
 // Parsing
 app.use(express.json());
 
-// Routes
-app.use('/api', searchRouter);
-app.use('/api', productRouter);
-app.use('/api', cartRouter);
-app.use('/admin', adminRouter);
-app.use('/auth', authRouter);
+// routes
+app.use('/api', searchRouter)
 
 // Page not found
 app.all("*", (req, res, next) => {
