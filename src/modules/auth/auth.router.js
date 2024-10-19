@@ -4,18 +4,21 @@ import * as authController from "./auth.controller.js";
 import * as authSchema from "./auth.schema.js";
 import { validation } from "../../middlewares/validation.middleware.js";
 
-// register
+// Register
 router.post(
   "/register",
   validation(authSchema.register),
   authController.register
 );
-<<<<<<< Updated upstream
-=======
 
-//login
-router.post("/login" , validation(authSchema.login) , authController.login)
+// Login
+router.post(
+  "/login",
+  validation(authSchema.login),
+  authController.login
+);
 
+// Sign out
+router.post('/signout', authController.signOut);
 
 export default router;
->>>>>>> Stashed changes

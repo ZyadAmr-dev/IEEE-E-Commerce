@@ -17,9 +17,7 @@ const productSchema = new Schema({
     price: { type: Number, min: 1, required: true },
     discount: { type: Number, min: 1, max: 100 },
     createdBy: { type: Types.ObjectId, ref: "User", required: true },
-    category: { type: Types.ObjectId, ref: "Category", required: true },
-    subcategory: { type: Types.ObjectId, ref: "Subcategory", required: true },
-    brand: { type: Types.ObjectId, ref: "Brand", required: true },
+    category: { type: String },
     cloudFolder: { type: String, unique: true, required: true }
 
 }, { timestampse: true, toJSON: { virtuals: true }, toObject: { virtuals: true } })
